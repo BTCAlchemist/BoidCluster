@@ -1,0 +1,13 @@
+{
+    "id": "spark-example-1", 
+    "cmd": "./spark-2.4.4-bin-hadoop2.7/bin/spark-submit --class org.apache.spark.examples.SparkPi --master mesos://zk://127.0.0.1:2181/mesos --deploy-mode client --supervise --executor-memory 1G --total-executor-cores 4 --conf spark.master.rest.enabled=true ./spark-2.4.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.4.4.jar 1000",
+    "cpus": 0.1,
+    "mem": 2048,
+    "instances": 1,
+    "fetch": [
+        {
+          "uri": "hdfs:///spark-2.4.4-bin-hadoop2.7.tgz",
+          "extract": true
+        }
+    ]
+}

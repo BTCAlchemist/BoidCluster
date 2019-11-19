@@ -1,0 +1,28 @@
+{
+  "id": "httpd",
+  "cpus": 0.2,
+  "mem": 10,
+  "disk": 0,
+  "instances": 1,
+  "constraints": [
+    [
+      "hostname",
+      "UNIQUE",
+      ""
+    ]
+  ],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "httpd",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp",
+          "name": "http"
+        }
+      ]
+    }
+  }
+}

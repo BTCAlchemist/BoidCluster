@@ -1,0 +1,15 @@
+worker dir for boid workers
+  mesos-slave with chronos
+dispatcher dir for boid dispatchers
+  zookeeper
+  mesos-master
+  marathon
+  marathon-lb
+storage dir for boid storage
+  hdfs
+  hbase
+  cassandra
+validator dir for boid validators
+accessor dir for boid stream accessors
+  storm
+  kafka
