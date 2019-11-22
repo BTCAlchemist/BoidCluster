@@ -1,0 +1,182 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "addprotocol",
+            "base": "",
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "datadir",
+                    "type": "string"
+                },
+                {
+                    "name": "fundaccount",
+                    "type": "name"
+                },
+                {
+                    "name": "fund",
+                    "type": "asset"
+                },
+                {
+                    "name": "tokencontract",
+                    "type": "name"
+                },
+                {
+                    "name": "dispatcher_pay_rate",
+                    "type": "float32"
+                },
+                {
+                    "name": "worker_pay_rate",
+                    "type": "float32"
+                }
+            ]
+        },
+        {
+            "name": "delprotocol",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "microseconds",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_count",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "payout",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "worker",
+                    "type": "name"
+                },
+                {
+                    "name": "unpaid_time",
+                    "type": "microseconds"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "protocol",
+            "base": "",
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "datadir",
+                    "type": "string"
+                },
+                {
+                    "name": "fundaccount",
+                    "type": "name"
+                },
+                {
+                    "name": "fund",
+                    "type": "asset"
+                },
+                {
+                    "name": "tokencontract",
+                    "type": "name"
+                },
+                {
+                    "name": "worker_pay_rate",
+                    "type": "float32"
+                },
+                {
+                    "name": "dispatcher_pay_rate",
+                    "type": "float32"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addprotocol",
+            "type": "addprotocol",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delprotocol",
+            "type": "delprotocol",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "payout",
+            "type": "payout",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "accounts",
+            "type": "account",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "protocols",
+            "type": "protocol",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

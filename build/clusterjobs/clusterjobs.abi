@@ -1,0 +1,512 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "conntoreg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "registry_contract",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "deldisptch",
+            "base": "",
+            "fields": [
+                {
+                    "name": "dispatcher",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "delworker",
+            "base": "",
+            "fields": [
+                {
+                    "name": "worker",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "dispatcher",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "total_time",
+                    "type": "microseconds"
+                },
+                {
+                    "name": "unpaid_time",
+                    "type": "microseconds"
+                }
+            ]
+        },
+        {
+            "name": "ipfsentry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "job",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "time",
+                    "type": "microseconds"
+                }
+            ]
+        },
+        {
+            "name": "microseconds",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_count",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "newjob",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "worker",
+                    "type": "name"
+                },
+                {
+                    "name": "time",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "payout",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "funder",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "contributor",
+                    "type": "name"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "protocol",
+            "base": "",
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "datadir",
+                    "type": "string"
+                },
+                {
+                    "name": "fundaccount",
+                    "type": "name"
+                },
+                {
+                    "name": "fund",
+                    "type": "asset"
+                },
+                {
+                    "name": "tokencontract",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "reg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "registry_contract",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "regdisptch",
+            "base": "",
+            "fields": [
+                {
+                    "name": "dispatcher",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "regworker",
+            "base": "",
+            "fields": [
+                {
+                    "name": "worker",
+                    "type": "name"
+                },
+                {
+                    "name": "researcher",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "removejob",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "worker",
+                    "type": "name"
+                },
+                {
+                    "name": "time",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "shardbucket",
+            "base": "",
+            "fields": [
+                {
+                    "name": "shard_uri",
+                    "type": "bytes"
+                },
+                {
+                    "name": "shard",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "updatedptch",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "dispatcher",
+                    "type": "name"
+                },
+                {
+                    "name": "time",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "worker",
+            "base": "",
+            "fields": [
+                {
+                    "name": "researcher",
+                    "type": "name"
+                },
+                {
+                    "name": "total_time",
+                    "type": "microseconds"
+                },
+                {
+                    "name": "unpaid_time",
+                    "type": "microseconds"
+                }
+            ]
+        },
+        {
+            "name": "xcleanup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "size",
+                    "type": "uint32"
+                },
+                {
+                    "name": "uri",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "xcommit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "size",
+                    "type": "uint32"
+                },
+                {
+                    "name": "uri",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "xdcommit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "xsignal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "service",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "signalRawData",
+                    "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "xwarmup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_provider",
+                    "type": "name"
+                },
+                {
+                    "name": "package",
+                    "type": "name"
+                },
+                {
+                    "name": "size",
+                    "type": "uint32"
+                },
+                {
+                    "name": "uri",
+                    "type": "string"
+                },
+                {
+                    "name": "data",
+                    "type": "bytes"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "conntoreg",
+            "type": "conntoreg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deldisptch",
+            "type": "deldisptch",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delworker",
+            "type": "delworker",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "newjob",
+            "type": "newjob",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "payout",
+            "type": "payout",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regdisptch",
+            "type": "regdisptch",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "regworker",
+            "type": "regworker",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "removejob",
+            "type": "removejob",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "updatedptch",
+            "type": "updatedptch",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xcleanup",
+            "type": "xcleanup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xcommit",
+            "type": "xcommit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xdcommit",
+            "type": "xdcommit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xsignal",
+            "type": "xsignal",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "xwarmup",
+            "type": "xwarmup",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": ".jobs",
+            "type": "job",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "dispatchers",
+            "type": "dispatcher",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "ipfsentry",
+            "type": "ipfsentry",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "jobs",
+            "type": "shardbucket",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "protocols",
+            "type": "protocol",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "registry",
+            "type": "reg",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "workers",
+            "type": "worker",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

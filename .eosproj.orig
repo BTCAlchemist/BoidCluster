@@ -1,0 +1,21 @@
+{
+  "main": "contracts/jobs.hpp",
+  "contract": "clusterjobs",
+  "include": "./contracts",
+  "resource": "",
+  "cdt": "v1.6.2",
+  "output": "./build/clusterjobs/clusterjobs.wasm",
+  "scripts": {
+    "build": "mkdir -p ./build/clusterjobs && mkdir -p ./build/clusterreg && eosio-cpp -abigen -I ./contracts -contract clusterjobs -o ./build/clusterjobs/clusterjobs.wasm contracts/jobs.cpp && cp ./build/clusterjobs/* ./ && eosio-cpp ./contracts -contract clusterreg -o ./build/clusterreg.wasm contracts/registry.cpp && cp ./build/clusterreg/* ./"
+  },
+  "deploy": {
+    "target": "both",
+    "mainnet": "",
+    "kylin": "",
+    "jungle": "",
+    "local": ""
+  },
+  "test": {
+    "npmClient": "npm"
+  }
+}
