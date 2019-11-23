@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   zookeeper:
     image: "errcsool/zookeeper"
@@ -29,8 +29,8 @@ services:
       MESOS_QUORUM: 1
       MESOS_CLUSTER: docker-compose
       MESOS_REGISTRY: replicated_log
-      MESOS_HOSTNAME: ${PUBLIC_IP}
-      LIBPROCESS_IP: ${PUBLIC_IP}
+      MESOS_HOSTNAME: ${DOCKER_IP}
+      LIBPROCESS_IP: ${DOCKER_IP}
       PORT0: 8080
       PORT1: 8081
     depends_on:
