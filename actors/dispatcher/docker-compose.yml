@@ -1,0 +1,61 @@
+version: "2"
+services:
+  zookeeper:
+    image: "errcsool/zookeeper"
+    network_mode:
+      host
+    ports:
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888"
+      - "8080:8080"
+    environment:
+      ZOO_TICK_TIME: 2000
+      ZOO_INIT_LIMIT: 10
+      ZOO_SYNC_LIMIT: 5
+      ZOO_MY_ID: 1
+      ZOO_CLIENT_PORT: 2181
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888
+
+  chronos-mesos:
+    image: "errcsool/chronos-mesos"
+    network_mode:
+      host
+    ports:
+      - "4400:4400"
+      - "5050:5050"
+    environment:
+      MESOS_ZK: zk://127.0.0.1:2181/mesos
+      MESOS_QUORUM: 1
+      MESOS_CLUSTER: docker-compose
+      MESOS_REGISTRY: replicated_log
+      MESOS_HOSTNAME: ${PUBLIC_IP}
+      LIBPROCESS_IP: ${PUBLIC_IP}
+      PORT0: 8080
+      PORT1: 8081
+    depends_on:
+      - zookeeper
+
+  marathon:
+    image: "errcsool/marathon"
+    network_mode:
+      host
+    ports:
+      - "3998:3998"
+    environment:
+      MARATHON_MASTER: zk://127.0.0.1:2181/mesos
+    depends_on:
+      - zookeeper
+
+  boid-lb:
+    image: "errcsool/boid-lb"
+    network_mode:
+      host
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9090:9090"
+      - "9091:9091"
+    #environment:
+    depends_on:
+      - zookeeper

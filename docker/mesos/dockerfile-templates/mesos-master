@@ -1,4 +1,4 @@
-FROM mesosphere/mesos:{VERSION}
+FROM mesosphere/mesos-master:1.7.1
 MAINTAINER Mesosphere <support@mesosphere.io>
 
 CMD ["--registry=in_memory"]
